@@ -1,0 +1,8 @@
+services:
+    security.authentication.success_handler:
+        class: Omid\ShopBundle\EventListener\AuthenticationSuccessHandler
+        arguments:  ["@security.http_utils", {}]
+
+    security.authentication.failure_handler:
+        class:  Omid\ShopBundle\EventListener\AuthenticationFailureHandler
+        arguments:  ["@http_kernel", "@security.http_utils", {}, "@logger"]
