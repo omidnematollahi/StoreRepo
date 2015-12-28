@@ -1,11 +1,45 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}افزودن محصول{% endblock %}
+
 {% block container %}
-    <h1>Product creation</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+    <div class="row">
+        {{ form_label(form.name, '', {'label_attr': {'class': 'col-md-2 col-sm-2 pull-right control-label text-left'} }) }}
+        <div class="col-md-9 col-sm-9">
+            {{ form_widget(form.name,{ 'attr' : {'class':'form-control'} }) }}
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        {{ form_label(form.price, '', {'label_attr': {'class': 'col-md-2 col-sm-2 pull-right control-label text-left'} }) }}
+        <div class="col-md-9 col-sm-9">
+            {{ form_widget(form.price,{ 'attr' : {'class':'form-control'} }) }}
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-md-9 col-sm-9">
+            {{ form_widget(form.isExists) }}
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        {{ form_label(form.extra, '', {'label_attr': {'class': 'col-md-2 col-sm-2 pull-right control-label text-left'} }) }}
+        <div class="col-md-9 col-sm-9">
+            {{ form_widget(form.extra) }}
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        {{ form_label(form.category, '', {'label_attr': {'class': 'col-md-2 col-sm-2 pull-right control-label text-left'} }) }}
+        <div class="col-md-9 col-sm-9">
+            {{ form_widget(form.category) }}
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="col-xs-12 text-center">
+            <button class="btn btn-success" type="submit">Create</button>
+        </div>
+    </div>
     {{ form_end(form) }}
 
     <ul>
