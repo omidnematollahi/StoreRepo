@@ -5,3 +5,7 @@ omid_shop_category:
 omid_shop_product:
     resource: "@OmidShopBundle/Resources/config/routing/product.yml"
     prefix:   /admin/product
+
+omid_frontend:
+    resource: Omid\ShopBundle\Controller\FrontedController
+    type: annotation
