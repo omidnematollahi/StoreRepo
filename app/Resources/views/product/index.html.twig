@@ -2,6 +2,32 @@
 
 {% block title %}نمایش محصولات{% endblock %}
 
+{% block product_menu %}
+    <li class="active">
+        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> محصولات<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="{{ path('product_new') }}">افزودن محصول</a>
+            </li>
+            <li>
+                <a class="active" href="{{ path('product_index') }}">نمایش محصولات</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> دسته بندی<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{ path('category_new') }}">افزودن دسته بندی</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('category_index') }}">نمایش دسته بندی</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /.nav-second-level -->
+    </li>
+{% endblock %}
+
 {% block container %}
     <div class="row">
         <div class="col-lg-12">
