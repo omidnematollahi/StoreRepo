@@ -1,0 +1,8 @@
+user_index:
+    path:     /
+    defaults: { _controller: "OmidShopBundle:User:index" }
+    methods:  GET
+
+user_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "OmidShopBundle:User:delete" }

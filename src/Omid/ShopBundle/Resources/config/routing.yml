@@ -1,3 +1,7 @@
+omid_user:
+    resource: "@OmidShopBundle/Resources/config/routing/user.yml"
+    prefix:   /admin/user
+
 omid_shop_category:
     resource: "@OmidShopBundle/Resources/config/routing/category.yml"
     prefix:   /admin/category
